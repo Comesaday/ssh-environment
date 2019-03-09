@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="100000000" />
+	<package strict-method-invocation="false" name="user" extends="struts-default" namespace="/user">
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="log_success">/WEB-INF/jsp/index.jsp</result>
+			<result name="log_fail">/index.jsp</result>
+			<result name="user_info">/WEB-INF/jsp/view.jsp</result>
+		</action>
+	</package>
+</struts>
+
+
